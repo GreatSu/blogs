@@ -1,0 +1,36 @@
+.main{
+    width: 100vw;
+    height: 70vh;
+}
+.navigate{
+    width: 90vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0 5vw 0 5vw;
+}
+
+.navigate>div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.navigate>div:nth-child(1){
+    width: 10vw;
+    justify-content: center;
+}
+.navigate>div>a{
+    width: 15vw;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:whitesmoke;
+    color: black;
+}
+.navigate>div>a:focus{
+    background-color: black;
+    color: white;
+}
