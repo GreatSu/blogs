@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./CommentHeader.css";
 
+import Login from './component/login'
+
+
+
 class CommentHeader extends Component {
   render() {
     return (
@@ -17,6 +21,21 @@ class Bgheader extends Component {
     this.state = {
       myname: "MEStar"
     };
+    this.showlogin = this.showlogin.bind(this)
+  }
+
+  showlogin(){
+    let login = document.getElementsByClassName('loginposition')[0]
+    login.style.display = 'block'
+    
+    console.log(window)
+
+    let mask = document.querySelector('.mask')
+    mask.style.display ='block'
+
+    let body = document.querySelector('body')
+    body.style.overflow = 'hidden'
+    
   }
 
   render() {
@@ -24,7 +43,8 @@ class Bgheader extends Component {
       <div className="headbg">
         <div className="headbgTop">
           <div>
-            <img src="./dist/img/mine.png" alt="" />
+            <img className="loginpic" src="./dist/img/mine.png" alt=""  onClick={this.showlogin} />
+            <Login />
           </div>
           <div>{this.state.myname}</div>
           <div className="headbgleft">
